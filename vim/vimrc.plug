@@ -1,0 +1,45 @@
+call plug#begin('~/.vim/plugged')
+
+" Fugitive Vim Github Wrapper and git stuff
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Interesting surround feature
+Plug 'tpope/vim-surround'
+
+" Directory tree
+Plug 'preservim/nerdtree'
+
+" Syntax - Still can't get java to work
+"Plug 'scrooloose/syntastic'
+
+" Java environment
+"Plug 'artur-shaik/vim-javacomplete2'
+"Plug 'maralla/completor.vim'
+
+" Autocomplete
+Plug 'valloric/youcompleteme'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
+
+" camelcase movement etc
+Plug 'chaoren/vim-wordmotion'
+
+" Highlighting yanks
+Plug 'machakann/vim-highlightedyank'
+
+" Airline bars
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Theme
+Plug 'lifepillar/vim-gruvbox8'
+
+" LSP
+Plug 'dense-analysis/ale'
+
+" Debugger :D
+" Plug 'puremourning/vimspector'
+
+call plug#end()
