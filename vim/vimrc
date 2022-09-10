@@ -1,92 +1,206 @@
-" No comapatible mode
-set nocompatible
-
-" Add line numbers
-set number
-
-set encoding=utf-8
-
-" Useful Features
-set autoindent
-set smarttab
-set incsearch
-set hlsearch
-set scrolloff=5
-set sidescrolloff=5
-set autoread
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-
-" Obscure features
-set display+=lastline
-set clipboard=unnamedplus
-
-" Status bar stuff
-set laststatus=2
-set showcmd
-set ruler
-set wildmenu
-
-execute "set <M-u>=\eu"
-execute "set <M-/>=\e/"
-execute "set <M-'>=\e'"
-
-" Key Bindings
-nmap <Space> <Leader>
-nmap <Leader>p "+p
-
-" Escape key bindings
-inoremap kj <Esc>
-vnoremap kj <Esc>
-
-" Window key bindings
-nmap ,w <C-W>
-nmap ,ww <C-W><C-W>
-tmap ,ww <C-W><C-W>
-tmap ,w <C-W>
-
-" Command key bindings
-nmap ,s :w<Enter>
-nmap ,q :q<Enter>
-tmap ,q exit<Enter>
-nmap <M-u> :NERDTreeToggle<Enter>
-nmap <M-'> :term<Enter>
-nmap <M-/> :noh<Enter>
+" #############################
+" ########## Plugins ##########
+" #############################
 
 " Call the .vimrc.plug file
 if filereadable(expand("~/.vimrc.plug"))
     source ~/.vimrc.plug
 endif
 
-" theme
-syntax enable
+" #############################
+" ########## Vanilla ##########
+" #############################
+
+set viminfofile+=~/dotfiles/vim/viminfo
+set nocompatible
+set number 
+set encoding=utf-8
+set autoindent
+set ignorecase
+set incsearch
+set hlsearch
+set scrolloff=5
+set sidescrolloff=5
+set autoread
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set display+=lastline
+set laststatus=2
+set showcmd
+set ruler
+set wildmenu
+
+
+" ##############################
+" ########## Mappings ##########
+" ##############################
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+execute "set <M-u>=\eu"
+execute "set <M-/>=\e/"
+execute "set <M-'>=\e'"
+execute "set <M-p>=\ep"
+
+" Escape key mapping
+inoremap kj <Esc>
+
+" Window key mappings
+nnoremap ,w <C-w>
+tnoremap ,w <C-h>
+
+" Command key mappings
+nmap ,s :w<Enter>
+nmap ,q :q<Enter>
+nmap ,/ :set invhlsearch<Enter>
+tmap ,q <Enter>exit<Enter>
+nmap <M-u> :NERDTreeToggle<Enter>
+nmap <M-'> :term<Enter>
+nmap <M-/> :noh<Enter>
+nmap <Esc><Space> :ALEDetail<Enter>
+nmap <Esc>i :ALEHover<Enter>
+nmap <Esc><Enter> :ALECodeAction<Enter>
+nmap <Esc>p :CtrlP<Enter>
+
+" ALE key mappings
+nmap ,gt :ALEGoToTypeDefinition<Enter>
+nmap ,gd :ALEGoToDefinition<Enter>
+nmap ,gi :ALEGoToImplementation<Enter>
+nmap ,gr :ALEFindReferences<Enter>
+nmap ,r :ALERename<Enter>
+nmap <Esc><Enter> :ALECodeAction<Enter>
+inoremap <C-n> <Cmd>call pum#map#insert_relative(+1)<CR>
+inoremap <C-p> <Cmd>call pum#map#insert_relative(-1)<CR>
+
+inoremap <silent><expr> <TAB>
+    \ pum#visible() ? '<Cmd>call pum#map#insert_relative(+1)<CR>' :
+    \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
+    \ '<TAB>' : ddc#manual_complete()
+
+inoremap <silent><expr> <S-TAB> pum#visible() ? '<Cmd>call pum#map#insert_relative(-1)<CR>' : '<C-h>'
+
+
+" ##########################
+" ########## Misc ##########
+" ##########################
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:rainbow_active = 1
+
+let g:AutoPairsMapBS = 0
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" ################################
+" ########## Completion ##########
+" ################################
+
+" Completion sources
+call ddc#custom#patch_filetype(
+  \ ['vim', 'toml'], 'sources', ['necovim', 'ale', 'file', 'around', 'mocword'])
+
+call ddc#custom#patch_global('sources', ['vim-lsp', 'ale', 'file', 'around', 'mocword'])
+call ddc#custom#patch_global('sourceOptions', {
+    \ 'necovim': {
+    \   'mark': 'vim',
+    \ },
+    \ 'vim-lsp': {
+    \   'mark': 'lsp',
+    \ },
+    \ 'ale': {
+    \   'mark': 'ale',
+    \ },
+    \ 'file': {
+    \   'mark': 'path',
+    \   'isVolatile': v:true,
+    \   'forceCompletionPattern': '\S/\S*',
+    \ },
+    \ 'around': {
+    \   'mark': 'rnd',
+    \ },
+    \ 'mocword': {
+    \   'mark': 'eng',
+    \   'isVolatile': v:true,
+    \ },
+  \ })
+
+call ddc#custom#patch_global('smartCase', v:true)
+call ddc#custom#patch_global('completionMenu', 'pum.vim')
+call ddc#custom#patch_global('sourceOptions', {
+  \   '_': {
+  \     'matchers': ['matcher_fuzzy'],
+  \     'sorters': ['sorter_fuzzy'],
+  \     'converters': ['converter_fuzzy']
+  \   }
+  \ })
+
+call ddc#enable()
+
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type='popup'
+
+let g:lsp_signature_help_enabled = 0
+
+call popup_preview#enable()
+
+" ###############################
+" ########## LSP Stuff ##########
+" ###############################
+
+let g:ale_completion_autoimport = 1
+let g:ale_hover_to_floating_preview = 1
+let g:ale_warn_about_trailing_blank_lines = 1
+let g:ale_warn_about_trailing_whitespace = 1
+let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'] }
+
+" #############################
+" ########## Autocmd ##########
+" #############################
+
+" Adding support for jsx
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+augroup END
+
+" Disable creating comments on new line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Pum stuff
+autocmd User PumCompleteDone
+   \ call ale#completion#HandleUserData(g:pum#completed_item)
+
+" Hybrid numbers
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+
+" ###########################
+" ########## Theme ##########
+" ###########################
+
+syntax on
+filetype plugin indent on
 set background=dark
-let g:gruvbox_italicize_strings = 0
 colorscheme gruvbox8
 let g:airline_theme = 'gruvbox8d'
-let g:airline_powerline_fonts = 0
+let g:gruvbox_italicize_strings = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 let g:highlightedyank_highlight_duration = 300
-
+set termguicolors
 
 if !exists('g:airline_symbols')
     let g:airline_symbols={}
 endif
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
@@ -94,8 +208,14 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-let g:lightline = {'separator': { 'left': '', 'right': '' },'subseparator': { 'left': '', 'right': '' }}
-
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-set viminfofile+=~/dotfiles/vim/viminfo
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.colnr = ' :'
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '並 '
+let g:airline_symbols.dirty='⚡'

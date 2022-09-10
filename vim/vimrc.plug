@@ -1,43 +1,59 @@
 call plug#begin('~/.vim/plugged')
 
-" Fugitive Vim Github Wrapper and git stuff
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+" Git stuff
+Plug 'tpope/vim-fugitive' " A plugin I have yet to use
+Plug 'airblade/vim-gitgutter' " Awesome git gutter feature
 
-" Interesting surround feature
-Plug 'tpope/vim-surround'
+" Quotes and bracket stuff
+Plug 'tpope/vim-surround' " To surround words that I should really use more often
+Plug 'jiangmiao/auto-pairs' " Auto pairs quotes and brackets
+Plug 'preservim/nerdcommenter' " To comment out stuff easily
 
-" Directory tree
-Plug 'preservim/nerdtree'
 
-" Syntax - Still can't get java to work
-"Plug 'scrooloose/syntastic'
+" Configuration stuff
+Plug 'editorconfig/editorconfig-vim' " For specifying vim options for different file types
 
-" Java environment
-"Plug 'artur-shaik/vim-javacomplete2'
-"Plug 'maralla/completor.vim'
+" LSP stuff
+Plug 'dense-analysis/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'rhysd/vim-lsp-ale'
+Plug 'mattn/vim-lsp-settings'
+Plug 'shougo/neco-vim'
 
-" Autocomplete
-Plug 'valloric/youcompleteme'
-Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdcommenter'
-Plug 'editorconfig/editorconfig-vim'
+" Additional syntax stuff
+Plug 'HerringtonDarkholme/yats.vim' " typescript syntax highlighting
+Plug 'maxmellon/vim-jsx-pretty' " jsx syntax highlighting
+Plug 'elkowar/yuck.vim' " Syntax highlighting for eww's yuck language
+Plug 'luochen1990/rainbow' " Rainbow brackets
+Plug 'udalov/kotlin-vim' "Kotlin support
 
-" camelcase movement etc
-Plug 'chaoren/vim-wordmotion'
+" ddc completion stuff
+Plug 'vim-denops/denops.vim' " Allows for deno written plugins to work
+Plug 'shougo/ddc.vim' " Completion plugin 
+Plug 'tani/ddc-fuzzy' " Adds filtering to completion results
 
-" Highlighting yanks
+" ddc completion source stuff
+Plug 'statiolake/ddc-ale' " Adds ALE lsp stuff as a completion source for ddc 
+Plug 'shun/ddc-vim-lsp' " Adds vim-lsp stuff as a completion source for ddc
+Plug 'lumakernel/ddc-file' " File completion source for ddc
+Plug 'shougo/ddc-around' " Proximity completion source
+Plug 'shougo/ddc-mocword' " English words completion source 
+
+" Displaying info stuff
+Plug 'vim-airline/vim-airline'
+Plug 'matsui54/denops-popup-preview.vim' " Popups for completion suggestions
+Plug 'shougo/echodoc.vim' " Displays funciton signatures yet only works for vim-lsp
+Plug 'shougo/pum.vim' " Custom popup menu
 Plug 'machakann/vim-highlightedyank'
 
-" Airline bars
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Theme stuff
+Plug 'lifepillar/vim-gruvbox8' " The best theme
 
-" Theme
-Plug 'lifepillar/vim-gruvbox8'
+" Navigation stuff
+Plug 'preservim/nerdtree' " Built in directory tree
+Plug 'chaoren/vim-wordmotion'
+Plug 'ctrlpvim/ctrlp.vim'
 
-" LSP
-Plug 'dense-analysis/ale'
 
 " Debugger :D
 " Plug 'puremourning/vimspector'

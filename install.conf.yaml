@@ -1,0 +1,29 @@
+- defaults:
+    link:
+        relink: true
+        force: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/vim
+    ~/.vimrc: vim/vimrc
+    ~/.ideavimrc: vim/ideavimrc
+    ~/.vimrc.plug: vim/vimrc.plug
+    ~/.bashrc: bash/bashrc
+    ~/.bash_logout: bash/bash_logout
+    ~/.inputrc: bash/inputrc
+    ~/.profile: bash/profile
+    ~/.gitconfig: git/gitconfig
+    ~/.ssh: ssh
+    ~/.xinitrc: x/xinitrc
+    ~/.xserverrc: x/xserverrc
+    ~/.Xresources: x/xresources
+    ~/.xbindkeysrc.scm: x/xbindkeysrc.scm
+    ~/.editorconfig: dev/editorconfig
+- create:
+    - ~/downloads
+    - ~/.vim/undo-history
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
