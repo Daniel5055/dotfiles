@@ -1,0 +1,61 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"for loop t times":
+	{
+		"prefix": ["fort"],
+		"body": 
+		[
+			"for (int i = 0; i < ${1:t}; i++)",
+			"{",
+			"\t$0",
+			"}",
+		],
+		"description": "A for loop used specifically for codeForces problems to iterate t times through a loop"
+	},
+
+	"CodeForces main format":
+	{
+		"prefix": ["problem", "codeforces"],
+		"body": 
+		[
+			"#include <iostream>",
+			"#include <vector>",
+			"",
+			"int main(int argc, char const *argv[])",
+			"{",
+			"\tint t;",
+			"\tstd::cin >> t;",
+			"\tstd::vector<int> outputs;",
+			"\t",
+			"\tfor (int i = 0; i < t; i++)",
+			"\t{",
+			"\t\t$0",
+			"\t}",
+			"\t",
+			"\tfor (int i = 0; i < t; i++)",
+			"\t{",
+			"\t\tstd::cout << outputs[i] << std::endl;",
+			"\t}",
+			"\t",
+			"\treturn 0;",
+			"}"
+
+		],
+		"description": "The defualt format for a typical CodeForces Problem"
+	}
+
+
+}

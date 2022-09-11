@@ -1,0 +1,80 @@
+{
+    "explorer.confirmDelete": false,
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "c++17",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "remote.SSH.remotePlatform": {
+      "db255.host.cs.st-andrews.ac.uk": "linux",
+      "cs": "linux",
+      "st-andrews-host": "linux",
+      "stahost": "linux",
+      "stahost17": "linux",
+      "pascal": "linux"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<esc>"] 
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        // Command shortcuts
+        {
+            "before": [",", "s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [",", "r"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.rename"
+                }
+            ]
+        },
+        {
+            "before": ["0"],
+            "after": ["^"],
+        },
+    ],
+    "vim.highlightedyank.enable": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.suggestSelection": "first",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.lineNumbers": "relative",
+    "java.debug.settings.onBuildFailureProceed": true,
+    "terminal.external.linuxExec": "urxvt",
+    "terminal.integrated.fontSize": 13,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabCompletion": "on",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "cSpell.language": "en-GB",
+    "redhat.telemetry.enabled": false,
+    "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "vim.vimrc.enable": true,
+    "prettier.proseWrap": "never",
+    "svelte.enable-ts-plugin": true,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "markdown-preview-enhanced.scrollSync": false,
+    "settingsSync.ignoredSettings": [
+        "editor.fontFamily"
+    ],
+    "editor.fontFamily": "'SauceCodePro Nerd Font Mono', 'monospace', monospace",
+}

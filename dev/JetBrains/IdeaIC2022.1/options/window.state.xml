@@ -1,0 +1,29 @@
+<application>
+  <component name="DimensionService">
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1894" height="302" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1894" height="302" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1894" height="302" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1894" height="302" />
+  </component>
+  <component name="WindowManager">
+    <frame x="12" y="64" width="1894" height="1002" />
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="1243" y="350" key="FileChooserDialogImpl" timestamp="1656881073939">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1243" y="350" key="FileChooserDialogImpl/0.0.1920.1080" timestamp="1656881073939" />
+    <state x="501" y="565" width="978" height="1002" key="WELCOME_SCREEN" timestamp="1656884792232">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="501" y="565" width="978" height="1002" key="WELCOME_SCREEN/0.0.1920.1080" timestamp="1656884792232" />
+    <state x="782" y="502" key="ide.config.custom.settings" timestamp="1656880977114">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="782" y="502" key="ide.config.custom.settings/0.0.1920.1080" timestamp="1656880977114" />
+    <state x="1055" y="265" width="800" height="748" key="new project wizard" timestamp="1656884789479">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1055" y="265" width="800" height="748" key="new project wizard/0.0.1920.1080" timestamp="1656884789479" />
+  </component>
+</application>

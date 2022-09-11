@@ -1,0 +1,122 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">YnJvd3Nlcg==</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">cQ==</entry>
+        <entry encoding="base64">dw==</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/documents/projects/untitled/src/compile_success.java" timestamp="1660432112604" />
+      <file name="$USER_HOME$/documents/projects/untitled/compile_success.java" timestamp="1660430878181">
+        <mark key="[" line="0" column="8" />
+        <mark key="]" line="0" column="16" />
+        <mark key="." line="0" column="15" />
+        <mark key="^" line="0" column="16" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/chess/src/main/kotlin/Main.kt" timestamp="1656883914436">
+        <mark key="[" line="4" column="0" />
+        <mark key="]" line="4" column="0" />
+        <mark key="." line="4" column="0" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/react/build.gradle.kts" timestamp="1656886906592">
+        <mark key="[" line="9" column="0" />
+        <mark key="]" line="9" column="0" />
+        <mark key="." line="9" column="0" />
+        <mark key="^" line="9" column="46" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/react/src/main/kotlin/Welcome.kt" timestamp="1656885300900">
+        <mark key="[" line="22" column="11" />
+        <mark key="]" line="22" column="12" />
+        <mark key="." line="22" column="11" />
+        <mark key="^" line="22" column="12" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/chess/src/main/kotlin/Graphics.kt" timestamp="1656884002281">
+        <mark key="[" line="2" column="19" />
+        <mark key="]" line="3" column="8" />
+        <mark key="." line="3" column="7" />
+        <mark key="^" line="3" column="8" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/chess/src/main/kotlin/Board.java" timestamp="1656884193075">
+        <mark key="[" line="2" column="31" />
+        <mark key="]" line="2" column="31" />
+        <mark key="." line="2" column="31" />
+        <mark key="^" line="2" column="32" />
+      </file>
+      <file name="$USER_HOME$/documents/projects/react/package.json" timestamp="1656886248888">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="/" timestamp="1656885017662">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps />
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="4">
+        <text encoding="base64">YnVsaw==</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">YnVsaw==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">Ow==</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">YnJvd3Nlcg==</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">aW1wb3J0IGphdmEuaW8uQnVmZmVyZWRSZWFkZXIKaW1wb3J0IGphdmEuaW8uSW5wdXRTdHJlYW1SZWFkZXI7Cg==</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgVmVjdG9yPD4K</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICBTeXN0ZW0ub3V0LnByaW50bG4oaW5wdXQpOwo=</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">aW1wb3J0IGphdmEudgo=</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">ICAgICAgICByZWFkZXIuCg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">ICAgICAgICBCdQo=</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgICAgICBpbwo=</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">SW1wb3J0IGphdmEuaW8uQnVmZmVyZWRSZWFkZXI7Owo=</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgICAgICBpCg==</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">cHVibGljIHN0YXRpYyB2b2lkIG1haW4oU3RyaW5nW11hcmdzKXsKICAgIH0K</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">dw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">YnJvd3Nlcg==</last-search>
+      <last-pattern encoding="base64">YnJvd3Nlcg==</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
+    </search>
+  </component>
+</application>

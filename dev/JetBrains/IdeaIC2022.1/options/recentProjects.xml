@@ -1,0 +1,34 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/documents/projects/react">
+          <value>
+            <RecentProjectMetaInfo frameTitle="react – build.gradle.kts [react]" projectWorkspaceId="2BS1hKA2nKXLrUChAXbJ8BcKCK1">
+              <option name="activationTimestamp" value="1660430814555" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-221.5921.22" />
+              <option name="buildTimestamp" value="1655795238785" />
+              <frame x="12" y="64" width="1894" height="1002" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1656884792264" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/documents/projects/untitled">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="2DJx12dBldpaDPGB18k4nhsgzli">
+              <option name="activationTimestamp" value="1660433723440" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-221.5921.22" />
+              <option name="buildTimestamp" value="1655795233210" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1660430815040" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/documents/projects" />
+  </component>
+</application>

@@ -7,23 +7,50 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
+
+    # Vim
     ~/.vim: vim/vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
     ~/.vimrc.plug: vim/vimrc.plug
+
+    # Bash
     ~/.bashrc: bash/bashrc
     ~/.bash_logout: bash/bash_logout
+
+    # Shell
     ~/.inputrc: bash/inputrc
     ~/.profile: bash/profile
+
+    # Git
     ~/.gitconfig: git/gitconfig
+
+    # SSH
     ~/.ssh: ssh
+
+    # X
     ~/.xinitrc: x/xinitrc
     ~/.xserverrc: x/xserverrc
     ~/.Xresources: x/xresources
     ~/.xbindkeysrc.scm: x/xbindkeysrc.scm
+
+    # Dev
+    # (Could probably do this better using globbing)
     ~/.editorconfig: dev/editorconfig
+    ~/.config/JetBrains: dev/JetBrains
+    ~/.config/ngrok: dev/ngrok
+    ~/.config/nextjs-nodejs: dev/nextjs-nodejs
+
+    ## Vscode
+    ~/.config/Code/Preferences: dev/Code/Preferences
+    ~/.config/Code/User/tasks.json: dev/Code/tasks.json
+    ~/.config/Code/User/settings.json: dev/Code/settings.json
+    ~/.config/Code/User/keybindings.json: dev/Code/keybindings.json
+    ~/.config/Code/User/snippets: dev/Code/snippets
+
 - create:
     - ~/downloads
+    - ~/.config/Code/User
     - ~/.vim/undo-history
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

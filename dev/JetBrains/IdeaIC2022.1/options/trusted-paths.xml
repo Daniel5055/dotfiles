@@ -1,0 +1,11 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/documents/projects/chess" value="true" />
+        <entry key="$USER_HOME$/documents/projects/react" value="true" />
+        <entry key="$USER_HOME$/documents/projects/untitled" value="true" />
+      </map>
+    </option>
+  </component>
+</application>

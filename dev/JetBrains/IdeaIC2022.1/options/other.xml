@@ -1,0 +1,92 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2BRuBJIRh84oGXhErE5mXmPL3ui">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2BS1hKA2nKXLrUChAXbJ8BcKCK1">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2DJx12dBldpaDPGB18k4nhsgzli">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "InstalledPluginsSearchHistory": "/sortBy:feature\n/sortBy:featured",
+    "KEYMAP": "up\ndown\nright\nleft",
+    "MarketplacePluginsSearchHistory": "/sortBy:featured\ngruvb\ngrub",
+    "NewKotlinWizard.buildSystem.type": "GradleKotlinDsl",
+    "NewKotlinWizard.structure.groupId": "me.dan",
+    "NextRunPlatformUpdateBuild": "IC-221.6008.13/2022.1.4",
+    "NextRunPlatformUpdateVersion": "2022.1.4",
+    "NonModalCommitCustomization.IsApplied": "true",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.se.text.search": "true",
+    "SHELLCHECK.PATH": "/home/dan/.local/share/JetBrains/IdeaIC2022.1/Shell Script/shellcheck",
+    "SettingsSearchHistory": "font\nterminal",
+    "appcds.runOnSecondStart": "IC-221.5921.22-1da296adf7af2f79e3cc973dae1e55d24997b7a6741d930e5c4fa98c9e528a9e",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "build.toolwindow.Build Output.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "build.toolwindow.run.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "bundled.plugins.list.saved.version": "IC-221.5921.22",
+    "com.intellij.ide.projectWizard.generators.JavaNewProjectWizard$Step.selectedStep": "IntelliJ",
+    "com.intellij.ide.wizard.NewProjectWizardLanguageStep.selectedStep": "Java",
+    "defaultJdkConfigured": "true",
+    "eclipse.projects.detected": "",
+    "export.settings.marked": "options/advancedSettings.xml|codestyles|options/debugger.xml|options/project.default.xml|options/colors.scheme.xml|colors|options/filetypes.xml|options/find.xml|options/vcs.xml|options/editor.xml|keymaps|options/ide-features-trainer.xml|options/laf.xml|options/parameter.hints.xml|options/baseRefactoring.xml|options/ide.general.xml|options/jdk.table.xml|options/terminal.xml|options/ui.lnf.xml|options/updates.xml|options/shared-indexes.xml|",
+    "file.gist.reindex.count": "43",
+    "fileTypeChangedCounter": "1",
+    "got.it.tooltip.cwm.invitation.notification": "1",
+    "got.it.tooltip.reader.mode.got.it": "1",
+    "got.it.tooltip.terminal.smart_command_execution": "1",
+    "gotit.previous.run": "IC-221.5921.22",
+    "ide.memory.adjusted": "true",
+    "ide.updates.whats.new.shown.for": "221",
+    "ideavim.statistics.timestamp": "1660430832132",
+    "input.method.disabler.muted": "true",
+    "installed.kotlin.plugin.version": "221-1.7.0-release-281-IJ5591.52",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin.lastUpdateCheck": "1656881645890",
+    "kotlin.plugin.releaseDate": "221-1.7.0-release-281-IJ5591.52:2022-06-09",
+    "last_opened_file_path": "/bin/bash",
+    "mt.autoReset": "true",
+    "mt.showStatisticsAgreement": "true",
+    "project.wizard.group": "newWizard.com.intellij.ide.wizard.NewProjectBuilder",
+    "registry.to.advanced.settings.migration.build": "IC-221.5921.22",
+    "tasks.pass.word.conversion.enforced": "true"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/bin/bash",
+      "/home/dan/downloads/settings.zip",
+      "/home/dan/documents/projects"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.android.tools.idea.sqlite.fileType.SqliteFileTypeDetector",
+      "com.android.tools.idea.profilers.capture.MemoryCaptureFileType$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ],
+    "kotlin-gradle-user-dirs": [
+      "/home/dan/.gradle"
+    ]
+  }
+}]]></component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="react-history" project-path="$USER_HOME$/documents/projects/react" last-access-time="1660430721332" />
+    </command-history-files>
+  </component>
+</application>
