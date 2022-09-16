@@ -185,7 +185,7 @@ syntax on
 filetype plugin indent on
 set background=dark
 colorscheme gruvbox8
-let g:airline_theme = 'gruvbox8d'
+let g:airline_theme = 'gruvbox8'
 let g:gruvbox_italicize_strings = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
