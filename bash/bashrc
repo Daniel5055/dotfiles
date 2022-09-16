@@ -117,7 +117,3 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=/usr/local/intellij/bin:$PATH
-
-# Git stuff
-export GIT_AUTHOR_NAME="Daniel Brathagen"
-export GIT_AUTHOR_EMAIL="daniel.brathagen@infomedia.dk"
