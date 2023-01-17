@@ -38,3 +38,5 @@
 	directory = /home/dan/Documents/projects/judy/bcc
 	directory = /home/dan/Documents/projects/judy/bcc/src/cc/libbpf
 	directory = /home/dan/Documents/projects/judy/bcc/libbpf-tools/bpftool
+[init]
+	defaultBranch = main

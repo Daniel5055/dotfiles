@@ -5,6 +5,11 @@
 
 - clean: ['~']
 
+- create:
+    - ~/downloads
+    - ~/.config/Code/User
+    - ~/.vim/undo-history
+
 - link:
     ~/.tmux.conf: tmux.conf
 
@@ -17,6 +22,7 @@
     # Bash
     ~/.bashrc: bash/bashrc
     ~/.bash_logout: bash/bash_logout
+    ~/.bash_profile: bash/bash_profile
 
     # Shell
     ~/.inputrc: bash/inputrc
@@ -48,9 +54,9 @@
     ~/.config/Code/User/keybindings.json: dev/Code/keybindings.json
     ~/.config/Code/User/snippets: dev/Code/snippets
 
-- create:
-    - ~/downloads
-    - ~/.config/Code/User
-    - ~/.vim/undo-history
+    ## Systemd
+    ~/.config/systemd/user/ssh-agent.service: systemd/user/ssh-agent.service
+    ~/.config/systemd/user/default.target.wants: systemd/user/default.target.wants
+            
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

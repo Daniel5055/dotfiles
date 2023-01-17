@@ -1,81 +1,206 @@
 {
-    "explorer.confirmDelete": false,
-    "C_Cpp.default.cStandard": "c17",
-    "C_Cpp.default.cppStandard": "c++17",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+  "explorer.confirmDelete": false,
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.cppStandard": "c++17",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "remote.SSH.remotePlatform": {
+    "db255.host.cs.st-andrews.ac.uk": "linux",
+    "cs": "linux",
+    "st-andrews-host": "linux",
+    "stahost": "linux",
+    "stahost17": "linux",
+    "pascal": "linux",
+    "temp": "linux",
+    "pascal.opoint.com": "linux"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // Command shortcuts
+    {
+      "before": [",", "s"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
     },
-    "remote.SSH.remotePlatform": {
-      "db255.host.cs.st-andrews.ac.uk": "linux",
-      "cs": "linux",
-      "st-andrews-host": "linux",
-      "stahost": "linux",
-      "stahost17": "linux",
-      "pascal": "linux"
+    {
+      "before": [",", "f"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.formatDocument",
+          "args": []
+        }
+      ]
     },
-    "explorer.confirmDragAndDrop": false,
-    "vim.insertModeKeyBindings": [
-
+    {
+      "before": [",", "g", "d"],
+      "after": [],
+      "commands": [
         {
-            "before": ["k", "j"],
-            "after": ["<esc>"] 
-        },
-    ],
-    "vim.normalModeKeyBindings": [
-        // Command shortcuts
+          "command": "editor.action.revealDefinition",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [",", "g", "r"],
+      "after": [],
+      "commands": [
         {
-            "before": [",", "s"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        },
+          "command": "editor.action.goToReferences",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [",", "r"],
+      "after": [],
+      "commands": [
         {
-            "before": [",", "r"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.rename"
-                }
-            ]
-        },
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    {
+      "before": [",", "r"],
+      "after": [],
+      "commands": [
         {
-            "before": ["0"],
-            "after": ["^"],
-        },
-    ],
-    "vim.highlightedyank.enable": true,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "editor.suggestSelection": "first",
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.lineNumbers": "relative",
-    "java.debug.settings.onBuildFailureProceed": true,
-    "terminal.external.linuxExec": "urxvt",
-    "terminal.integrated.fontSize": 13,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.tabCompletion": "on",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "cSpell.language": "en-GB",
-    "redhat.telemetry.enabled": false,
-    "vim.showMarksInGutter": true,
-    "vim.smartRelativeLine": true,
-    "window.customMenuBarAltFocus": false,
-    "window.enableMenuBarMnemonics": false,
-    "vim.vimrc.enable": false,
-    "prettier.proseWrap": "never",
-    "svelte.enable-ts-plugin": true,
-    "markdown-preview-enhanced.previewTheme": "github-light.css",
-    "markdown-preview-enhanced.scrollSync": false,
-    "settingsSync.ignoredSettings": [
-        "editor.fontFamily"
-    ],
-    "editor.fontFamily": "'SauceCodePro Nerd Font Mono', 'monospace', monospace",
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    {
+      "before": ["0"],
+      "after": ["^"]
+    }
+  ],
+  "vim.highlightedyank.enable": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.lineNumbers": "relative",
+  "java.debug.settings.onBuildFailureProceed": true,
+  "terminal.external.linuxExec": "urxvt",
+  "terminal.integrated.fontSize": 13,
+  "editor.tabCompletion": "on",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.language": "en-GB",
+  "redhat.telemetry.enabled": false,
+  "vim.showMarksInGutter": true,
+  "vim.smartRelativeLine": true,
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+  "vim.vimrc.enable": true,
+  "prettier.proseWrap": "never",
+  "svelte.enable-ts-plugin": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.scrollSync": false,
+"settingsSync.ignoredSettings": [
+  "editor.fontFamily",
+  "editor.tabSize",
+  "terminal.integrated.letterSpacing"
+],
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "material-icon-theme",
+  "java.test.config": {
+    "workingDirectory": "${workspaceFolder}"
+  },
+  "cSpell.userWords": [
+    "Brathagen",
+    "Multipurpose",
+    "Opoint",
+    "pipelining",
+    "singleplayer",
+    "substreams"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+"svelte.plugin.svelte.note-new-transformation": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.enableFiletypes": [
+    "!python"
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+"[python]": {
+},
+"gitlab.customQueries": [
+    {
+        "name": "Issues assigned to me",
+        "type": "issues",
+        "scope": "assigned_to_me",
+        "state": "opened",
+        "noItemText": "There is no issue assigned to you."
+    },
+    {
+        "name": "Issues created by me",
+        "type": "issues",
+        "scope": "created_by_me",
+        "state": "opened",
+        "noItemText": "There is no issue created by you."
+    },
+    {
+        "name": "Merge requests assigned to me",
+        "type": "merge_requests",
+        "scope": "assigned_to_me",
+        "state": "opened",
+        "noItemText": "There is no MR assigned to you."
+    },
+    {
+        "name": "Merge requests I'm reviewing",
+        "type": "merge_requests",
+        "reviewer": "<current_user>",
+        "state": "opened",
+        "noItemText": "There is no MR for you to review."
+    },
+    {
+        "name": "Merge requests created by me",
+        "type": "merge_requests",
+        "scope": "created_by_me",
+        "state": "opened",
+        "noItemText": "There is no MR created by you."
+    },
+    {
+        "name": "All project merge requests",
+        "type": "merge_requests",
+        "scope": "all",
+        "state": "opened",
+        "noItemText": "The project has no merge requests"
+    }
+],
+"files.associations": {
+    "*.py": "python"
+},
+"terminal.integrated.customGlyphs": false
 }
