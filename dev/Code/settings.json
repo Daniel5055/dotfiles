@@ -202,5 +202,8 @@
 "files.associations": {
     "*.py": "python"
 },
-"terminal.integrated.customGlyphs": false
+"terminal.integrated.customGlyphs": false,
+"[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
 }
