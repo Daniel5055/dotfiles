@@ -124,11 +124,14 @@
   },
   "cSpell.userWords": [
     "Brathagen",
+    "color",
     "Multipurpose",
     "Opoint",
     "pipelining",
     "singleplayer",
-    "substreams"
+    "stacscheck",
+    "substreams",
+    "Vars"
   ],
   "security.workspace.trust.untrustedFiles": "open",
 "svelte.plugin.svelte.note-new-transformation": false,
@@ -154,6 +157,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 "[python]": {
+  "editor.formatOnType": true
 },
 "gitlab.customQueries": [
     {
@@ -205,5 +209,9 @@
 "terminal.integrated.customGlyphs": false,
 "[typescript]": {
   "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
+},
+"[svelte]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"haskell.manageHLS": "GHCup"
 }
