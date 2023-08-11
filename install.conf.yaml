@@ -1,7 +1,8 @@
+---
 - defaults:
     link:
-        relink: true
-        force: true
+      relink: true
+      force: true
 
 - clean: ['~']
 
@@ -48,11 +49,11 @@
     ~/.config/nextjs-nodejs: dev/nextjs-nodejs
 
     ## Vscode
-    ~/.config/Code/Preferences: 
+    ~/.config/Code/Preferences:
       path: dev/Code/Preferences
       create: true
 
-    ~/.config/Code/User/tasks.json: 
+    ~/.config/Code/User/tasks.json:
       path: dev/Code/tasks.json
       create: true
     ~/.config/Code/User/settings.json: dev/Code/settings.json
@@ -60,7 +61,9 @@
     ~/.config/Code/User/snippets: dev/Code/snippets
 
     ## Systemd
-    ~/.config/systemd/user/ssh-agent.service: systemd/user/ssh-agent.service
-    ~/.config/systemd/user/default.target.wants: systemd/user/default.target.wants
+    ~/.config/systemd/user/ssh-agent.service:
+      systemd/user/ssh-agent.service
+    ~/.config/systemd/user/default.target.wants:
+      systemd/user/default.target.wants
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

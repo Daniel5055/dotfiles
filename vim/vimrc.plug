@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'matsui54/denops-popup-preview.vim' " Popups for completion suggestions
 Plug 'shougo/echodoc.vim' " Displays funciton signatures yet only works for vim-lsp
 Plug 'shougo/pum.vim' " Custom popup menu
+Plug 'shougo/ddc-ui-pum' " Custom popup menu
 Plug 'machakann/vim-highlightedyank'
 
 " Theme stuff
