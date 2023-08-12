@@ -3,6 +3,8 @@
     link:
       relink: true
       force: true
+    shell:
+      quiet: true
 
 - clean: ['~']
 
@@ -10,6 +12,9 @@
     - ~/downloads
     - ~/.config/Code/User
     - ~/.vim/undo-history
+    - ~/.local/bin
+    - ~/.local/lib
+    - ~/.local/share
 
 - link:
     ~/.tmux.conf: tmux.conf
@@ -67,3 +72,6 @@
       systemd/user/default.target.wants
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [scripts/vim.sh, Installing Vim plugins]
+    - [scripts/deno.sh, Installing Deno]
+    - [scripts/nvm.sh, Installing NVM]

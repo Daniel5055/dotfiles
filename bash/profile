@@ -28,7 +28,7 @@ fi
 
 export TERMINAL=urxvt
 
-# Load profiles from /etc/profile.d
+# Load profiles from ~/profile.d
 if test -d "$HOME/.profile.d/"; then
 	for profile in "$HOME"/.profile.d/*.sh; do
         echo "$profile"
@@ -36,4 +36,11 @@ if test -d "$HOME/.profile.d/"; then
 	done
 	unset profile
 fi
+
+# XDG stuff
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export XDG_STATE_HOME="$HOME/.local/state"
 
