@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+source shell/profile.d/0-xdg.sh
+
 cargo install mocword
 
 download_url=https://github.com/high-moctane/mocword-data/releases/download/eng20200217/mocword.sqlite.gz

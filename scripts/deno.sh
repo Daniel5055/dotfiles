@@ -1,5 +1,9 @@
 #! /usr/bin/sh
 
+# Run in dotfiles dir
+source shell/profile.d/0-xdg.sh
+source shell/profile.d/deno.sh
+
 if [ -z "${DENO_INSTALL+x}" ]; then
     echo "\$DENO_INSTALL is not set, cannot install deno"
     exit 1
