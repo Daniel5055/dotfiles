@@ -76,3 +76,5 @@
     - [scripts/deno.sh, Installing Deno]
     - [scripts/nvm.sh, Installing NVM]
     - [scripts/ghcup.sh, Installing Ghcup]
+    - [scripts/rust.sh, Installing Rustup]
+    - [scripts/mocword.sh, Installing Mocword]
