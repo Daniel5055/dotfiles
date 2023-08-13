@@ -75,3 +75,4 @@
     - [scripts/vim.sh, Installing Vim plugins]
     - [scripts/deno.sh, Installing Deno]
     - [scripts/nvm.sh, Installing NVM]
+    - [scripts/ghcup.sh, Installing Ghcup]
