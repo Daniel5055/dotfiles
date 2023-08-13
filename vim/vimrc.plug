@@ -9,7 +9,6 @@ Plug 'tpope/vim-surround' " To surround words that I should really use more ofte
 Plug 'jiangmiao/auto-pairs' " Auto pairs quotes and brackets
 Plug 'preservim/nerdcommenter' " To comment out stuff easily
 
-
 " Configuration stuff
 Plug 'editorconfig/editorconfig-vim' " For specifying vim options for different file types
 

@@ -17,8 +17,6 @@
     - ~/.local/share
 
 - link:
-    ~/.tmux.conf: tmux.conf
-
     # Vim
     ~/.vim: vim/vim
     ~/.vimrc: vim/vimrc
@@ -28,17 +26,14 @@
     # Bash
     ~/.bashrc: bash/bashrc
     ~/.bash_logout: bash/bash_logout
-    ~/.bash_profile: bash/bash_profile
 
     # Shell
-    ~/.inputrc: bash/inputrc
-    ~/.profile: bash/profile
+    ~/.inputrc: shell/inputrc
+    ~/.profile: shell/profile
+    ~/.profile.d: shell/profile.d
 
     # Git
     ~/.gitconfig: git/gitconfig
-
-    # SSH
-    ~/.ssh: ssh
 
     # X
     ~/.xinitrc: x/xinitrc
@@ -72,9 +67,10 @@
       systemd/user/default.target.wants
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [scripts/vim.sh, Installing Vim plugins]
-    - [scripts/deno.sh, Installing Deno]
-    - [scripts/nvm.sh, Installing NVM]
-    - [scripts/ghcup.sh, Installing Ghcup]
     - [scripts/rust.sh, Installing Rustup]
     - [scripts/mocword.sh, Installing Mocword]
+    - [scripts/deno.sh, Installing Deno]
+    - [scripts/vim.sh, Installing Vim plugins]
+    - [scripts/nvm.sh, Installing NVM]
+    - [scripts/ghcup.sh, Installing Ghcup]
+
