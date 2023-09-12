@@ -1,8 +1,8 @@
 #! /usr/bin/sh
 
-# Run in dotfiles dir
-source shell/profile.d/0-xdg.sh
-source shell/profile.d/deno.sh
+# Sourcing env
+. shell/profile.d/0-xdg.sh
+. shell/profile.d/deno.sh
 
 if [ -z "${DENO_INSTALL+x}" ]; then
     echo "\$DENO_INSTALL is not set, cannot install deno"
@@ -11,6 +11,8 @@ fi
 
 # Installs to $DENO_INSTALL thanks to env variables set in profile.d
 curl -fsSL https://deno.land/x/install/install.sh | sh
-mv "$DENO_INSTALL"/bin/* "$HOME"/.local/bin
-rm -r "$DENO_INSTALL"/bin
+
+# Move binary
+mv "$DENO_INSTALL"/bin/* "$XDG_BIN_HOME"
+rm -rf "$DENO_INSTALL"/bin
 

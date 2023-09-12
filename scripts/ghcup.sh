@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
+# Source env
 source shell/profile.d/0-xdg.sh
 
 # Unattended installation of ghcup to xdg directories

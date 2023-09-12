@@ -24,3 +24,4 @@ fi
 
 moc_data="$share_dir/mocword/mocword.sqlite" 
 export MOCWORD_DATA="$moc_data"
+

@@ -5,6 +5,9 @@
       force: true
     shell:
       quiet: true
+    install:
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
@@ -65,12 +68,28 @@
       systemd/user/ssh-agent.service
     ~/.config/systemd/user/default.target.wants:
       systemd/user/default.target.wants
+
+- install:
+    rust:
+        for: cargo
+        command: scripts/rust.sh
+        description: Installing Rust Toolkit
+    mocword:
+        for: mocword
+        command: scripts/mocword.sh
+        description: Installing Mocword
+    deno:
+        for: deno
+        command: scripts/deno.sh
+        description: Installing Deno
+    ghcup:
+        for: 
+            - ghc
+            - cabal
+        command: scripts/ghcup.sh
+        description: Installing GHC
+            
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [scripts/rust.sh, Installing Rustup]
-    - [scripts/mocword.sh, Installing Mocword]
-    - [scripts/deno.sh, Installing Deno]
     - [scripts/vim.sh, Installing Vim plugins]
-    - [scripts/nvm.sh, Installing NVM]
-    - [scripts/ghcup.sh, Installing Ghcup]
 

@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
+# Sourcing env
 source shell/profile.d/0-xdg.sh
 source shell/profile.d/rust.sh
 
