@@ -2,3 +2,4 @@ vim/vim/plugged/*
 vim/viminfo
 vim/viminfo.tmp
 ssh
+__pycache__/

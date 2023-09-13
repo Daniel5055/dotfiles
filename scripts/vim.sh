@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 
 # Install vim plugins
-vim -u vim/vimrc.plug +PlugInstall +qall
+vim +PlugInstall +qall > /dev/null
 

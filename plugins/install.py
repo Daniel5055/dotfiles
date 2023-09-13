@@ -1,6 +1,7 @@
 import dotbot
 import traceback
 from shutil import which
+from os.path import expandvars, isfile
 
 class Install(dotbot.Plugin):
     """
@@ -20,8 +21,6 @@ class Install(dotbot.Plugin):
             raise ValueError("Install cannot handle directive {}".format(directive))
 
         try:
-            self._log.info(data)
-
             defaults = self._context.defaults().get("install", {})
             success = True
 
@@ -37,23 +36,41 @@ class Install(dotbot.Plugin):
                     msg = options.get("description", None)
 
                     # for either expects a single command, or list of commands
-                    targets = options.get("for", [])
-                    if not isinstance(targets, list):
-                        targets = [targets]
+                    targets = options.get("for", None)
+                    target_commands = []
+                    target_files = []
+
+                    if isinstance(targets, dict):
+                        target_commands = targets.get('command', [])
+                        target_files = targets.get('file', [])
+                        if not isinstance(target_commands, list):
+                            target_commands = [target_commands]
+                        if not isinstance(target_files, list):
+                            target_files = [target_files]
+                    elif isinstance(targets, list):
+                        target_commands = targets
+                    elif targets is not None:
+                        target_commands = [targets]
+
+                    # Apparently python doesn't used 'which' command in backend so should be fine
+                    missing_commands = list(filter(lambda t: which(t) is None, target_commands))
+                    missing_files = list(filter(lambda t: not isfile(expandvars(t)), target_files))
 
                     stdin = defaults.get("stdin", False)
                     stdout = defaults.get("stdout", False)
                     stderr = defaults.get("stderr", False)
 
-                    # Apparently python doesn't used 'which' command in backend so should be fine
-                    missing_targets = list(filter(lambda t: which(t) is None, targets))
-                    if len(missing_targets) > 0:
-
+                    if len(missing_commands) > 0 or len(missing_files) > 0:
                         # Plurality
-                        if len(missing_targets) == 1:
-                            self._log.warning("Missing following command for {}: {}".format(dependency, ",".join(missing_targets)))
-                        else:
-                            self._log.warning("Missing following commands {}: {}".format(dependency, ",".join(missing_targets)))
+                        if len(missing_commands) == 1:
+                            self._log.warning("Missing following command for {}: {}".format(dependency, ",".join(missing_commands)))
+                        elif len(missing_commands) > 1:
+                            self._log.warning("Missing following commands {}: {}".format(dependency, ",".join(missing_commands)))
+
+                        if len(missing_files) == 1:
+                            self._log.warning("Missing following files for {}: {}".format(dependency, ",".join(missing_files)))
+                        elif len(missing_files) > 1:
+                            self._log.warning("Missing following commands {}: {}".format(dependency, ",".join(missing_files)))
 
                         self._log.lowinfo("└ {}".format(msg))
 

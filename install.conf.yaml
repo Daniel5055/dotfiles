@@ -75,7 +75,9 @@
         command: scripts/rust.sh
         description: Installing Rust Toolkit
     mocword:
-        for: mocword
+        for:
+            command: mocword
+            file: $MOCWORD_DATA
         command: scripts/mocword.sh
         description: Installing Mocword
     deno:

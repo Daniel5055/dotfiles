@@ -116,5 +116,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/intellij/bin:$PATH
-
