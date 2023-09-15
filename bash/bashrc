@@ -116,3 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Sourcing adds the asdf command and its paths
+. "$ASDF_DIR/asdf.sh"
+

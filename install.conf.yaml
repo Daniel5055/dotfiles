@@ -69,7 +69,14 @@
     ~/.config/systemd/user/default.target.wants:
       systemd/user/default.target.wants
 
+    ## asdf
+    ~/.tool-versions: asdf/tool-versions
+
 - install:
+    asdf:
+        for: asdf
+        command: scripts/asdf.sh
+        description: Installing asdf
     rust:
         for: cargo
         command: scripts/rust.sh
@@ -80,10 +87,6 @@
             file: $MOCWORD_DATA
         command: scripts/mocword.sh
         description: Installing Mocword
-    deno:
-        for: deno
-        command: scripts/deno.sh
-        description: Installing Deno
     ghcup:
         for: 
             - ghc
