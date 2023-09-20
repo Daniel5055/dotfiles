@@ -87,6 +87,19 @@
             file: $MOCWORD_DATA
         command: scripts/mocword.sh
         description: Installing Mocword
+    alacritty:
+        for: alacritty
+        command: scripts/alacritty.sh
+        description: Installing Alacritty
+    SauceCodePro:
+        for:
+            test:
+                - bash -c 'fc-list | grep "SauceCodePro Nerd Font Mono.*style=Regular"'
+                - bash -c 'fc-list | grep "SauceCodePro Nerd Font Mono.*style=Bold"'
+                - bash -c 'fc-list | grep "SauceCodePro Nerd Font Mono.*style=Italic"'
+                - bash -c 'fc-list | grep "SauceCodePro Nerd Font Mono.*style=Bold Italic"'
+        command: scripts/font.sh
+        description: Installing SauceCodePro Nerd Font Mono
     ghcup:
         for: 
             - ghc
